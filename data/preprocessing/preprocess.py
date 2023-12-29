@@ -19,14 +19,12 @@ def parse_message(line):
   match = re.match(pattern, line)
   # Return a dictionary with the extracted fields
   if match:
-    message = {
+    return {
       "date": match.group(1),
       "timestamp": match.group(2),
       "sender": match.group(3),
       "text": '<sender>' + match.group(3) + '</sender>' + match.group(4)
     }
-    print(message)
-    return message
   else:
     return None
 
