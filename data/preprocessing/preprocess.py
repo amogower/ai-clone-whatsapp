@@ -66,7 +66,7 @@ def txt_to_csv(txt_path, csv_writer, parent_id):
       # If the line does not start with a [, it is a continuation of the previous message
       else:
         # If the flag is True, append the line to the text field of the message
-        if is_message and message not None:
+        if is_message and not message is None:
           message["text"] += "\n" + line
         # Otherwise, ignore the line
         else:
