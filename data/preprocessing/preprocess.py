@@ -15,7 +15,7 @@ def generate_id():
 # Define a function to parse a message from a line of text
 def parse_message(line):
   # Use a regular expression to extract the date, time, sender and text
-  pattern = r"\[(\d{2}\.\d{2}\.\d{2}), (\d{2}:\d{2}:\d{2})\] ([^:]+): (.+)"
+  pattern = r"\[(\d{2}\/\d{2}\/\d{4}), (\d{2}:\d{2}:\d{2})\] ([^:]+): (.+)"
   match = re.match(pattern, line)
   # Return a dictionary with the extracted fields
   if match:
